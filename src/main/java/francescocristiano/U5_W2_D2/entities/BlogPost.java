@@ -29,7 +29,7 @@ public class BlogPost {
             throw new IllegalArgumentException("categoryString cannot be null");
         }
         try {
-            return Category.valueOf(categoryString);
+            return Category.valueOf(categoryString.toUpperCase());
         } catch (IllegalArgumentException e) {
             throw new IllegalArgumentException("categoryString must be one of: NEWS, TECH, SCIENCE, ENTERTAINMENT, SPORT, LIFESTYLE, TRAVEL, FASHION");
         }
